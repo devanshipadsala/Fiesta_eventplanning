@@ -61,9 +61,7 @@ div {
     <label for="continent">Contient</label>
     <select id="continent" name="continent">
       <option value="australia">Australia</option>
-      <label for="australia">Australia</label>
-      <select id="sydney" name="sydney">
-      <select id="melbourne" name="melbourne">
+     
       <option value="asia">Asia</option>
       <option value="europe">Europe</option>
       <option value="africa">Africa</option>
@@ -75,6 +73,7 @@ div {
     <input type="submit" value="Submit">
   </form>
 </div>
+
 
 </body>
 </html>
