@@ -58,11 +58,18 @@ div {
     <label for="lname">Last Name</label>
     <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-    <label for="country">Country</label>
-    <select id="country" name="country">
+    <label for="continent">Contient</label>
+    <select id="continent" name="continent">
       <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
+      <label for="australia">Australia</label>
+      <select id="sydney" name="sydney">
+      <select id="melbourne" name="melbourne">
+      <option value="asia">Asia</option>
+      <option value="europe">Europe</option>
+      <option value="africa">Africa</option>
+      <option value="north america">North America</option>
+      <option value="south america">South America</option>
+      
     </select>
   
     <input type="submit" value="Submit">
