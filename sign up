@@ -48,32 +48,20 @@ div {
 </head>
 <body>
 
-<h3>party planners form </h3>
+<h3>party planners sign up </h3>
 
 <div>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="continent">Contient</label>
-    <select id="continent" name="continent">
-      <option value="australia">Australia</option>
-     
-      <option value="asia">Asia</option>
-      <option value="europe">Europe</option>
-      <option value="africa">Africa</option>
-      <option value="north america">North America</option>
-      <option value="south america">South America</option>
-      
-    </select>
+  <form action="/action_page.php" >
+  <label for="fname">First name:</label><br>
+  <input  type="text" id="fname" name="fname" ><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <label for="email">Email/phone no:</label><br>
+  <input type="text" id="email" name="email"><br>
+   <input type="submit" value="Submit">
   
-    <input type="submit" value="Submit">
-  </form>
+  label 
+  {   background-color:#900C3F; color:
 </div>
-
-
 </body>
 </html>
