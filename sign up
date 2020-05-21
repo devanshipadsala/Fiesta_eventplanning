@@ -61,19 +61,20 @@ div {
   <label for="email">Email/phone no:</label><br>
   <input type="text" id="email" name="email"><br>
   
-  <label for="address">Address:</label><br>
+  <label for="address">Address: (zip code must be included)</label><br>
  <input type="text" id="adress" name="adress"><br>
- <h5>Zip code must be included</h5>
+
 
  <label for="datemax">Birth date:</label>
  <input type="date" id="datemax" name="datemax" max="1980-31-12><br>
  
  <p>Please select your gender</p>
+ 
   <label for="male">Male</label><br>
-  <input type="radio" id="male" name="gender" value="male">
+  <input type="radio" id="male" name="gender" value="male"><br>
  
  <label for="female">Female</label><br>
-  <input type="radio" id="female" name="gender" value="female">
+  <input type="radio" id="female" name="gender" value="female"><br>
 
   <label for="other">Other</label><br>
   <input type="radio" id="other" name="gender" value="other"><br>
@@ -85,6 +86,9 @@ div {
   <label for="age2">31 - 60</label><br>  
   <input type="radio" id="age3" name="age" value="100">
   <label for="age3">61 - 100</label><br><br>
+  <h4>select event</h4>
+  <label for="bday">Birthday</label><br>
+  <input type="radio" id="bday" name="birthday">
 
  <input type="submit" value="Submit">
  </form>
