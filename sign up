@@ -1,97 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html  style="font-size: 20px;font-family: Baloo 2, Old Standered, News cycle; " lang="en-US">
+	<html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.button {
-  background-color: #4CAF50;
-  border: line ;
-  color: white;
-  padding: 16px 33px;
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  
+}
+
+/* y is dis so complicated */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
   text-align: center;
-  text-decoration: none;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  transition: background-color 0.6s ease;
 }
 
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.active {
+  background-color: #717171;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 </style>
 </head>
 <body>
 
-<h3>party planners sign up </h3>
+<img src="logo.png" style="width:12%">  <h1>Fiesta.com</h1>
 
-<div>
-  <form action="/action_page.php" >
-  <label for="fname">First name:</label><br>
-  <input  type="text" id="fname" name="fname" ><br>
-  
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br>
-  
-  <label for="email">Email/phone no:</label><br>
-  <input type="text" id="email" name="email"><br>
-  
-  <label for="address">Address: (zip code must be included)</label><br>
- <input type="text" id="adress" name="adress"><br>
+  <button><a href="home page.html">Home</a></button>
+
+      
+  <button><a href="Sign up.html">sign up</a></button>
 
 
- <label for="datemax">Birth date:</label>
- <input type="date" id="datemax" name="datemax" max="1980-31-12><br>
- 
- <p>Please select your gender</p>
- 
-  <label for="male">Male</label><br>
-  <input type="radio" id="male" name="gender" value="male"><br>
- 
- <label for="female">Female</label><br>
-  <input type="radio" id="female" name="gender" value="female"><br>
+<div class="slideshow-container">
 
-  <label for="other">Other</label><br>
-  <input type="radio" id="other" name="gender" value="other"><br>
-  
-  <p>select your age</p>
-  <input type="radio" id="age1" name="age" value="30">
-  <label for="age1">0 - 30</label><br>
-  <input type="radio" id="age2" name="age" value="60">
-  <label for="age2">31 - 60</label><br>  
-  <input type="radio" id="age3" name="age" value="100">
-  <label for="age3">61 - 100</label><br><br>
-  <h4>select event</h4>
-  <label for="bday">Birthday</label><br>
-  <input type="radio" id="bday" name="birthday">
-
- <input type="submit" value="Submit">
- </form>
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="Pic 2.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
 </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="Pic 1.jpg" style="width:100%,height=200%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="Pic 3.jpg" style="width:100%, height=200%">
+  <div class="text">Caption Three</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="party.j.jpg"  style="width:100%, height:200%">
+   <div class="text">Caption four</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div> 
+  <img src="party.jpg" style="width:100%, height=200%">
+  <div class="text">Caption five</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+	<div class="w3-container">
+  <h2>Buttons (w3-btn)</h2>
+  <input type="button" class="w3-btn w3-red" value="enter">
+  <button class="w3-btn w3-red">enter </button>
+</div>
+</script>
+
 </body>
-</html>
+</html> 
