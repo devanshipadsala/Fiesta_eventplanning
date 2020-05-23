@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
+body {font-family: Baloo 2, sans-serif,}
 .mySlides {display: none;}
-img {vertical-align: middle;}
 
 
 .slideshow-container {
-  max-width: 800px;
+  max-width: 1000px;
   position: relative;
   margin: auto;
+  
 }
 
 /* y is dis so complicated */
@@ -54,9 +54,9 @@ img {vertical-align: middle;}
 
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 6s;
+  -webkit-animation-duration: 1.5s;
   animation-name: fade;
-  animation-duration: 6s;
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -74,8 +74,10 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-<body>
+<body class="w3-container w3 auto">
 
 <img src="logo.png" style="width:12%">  <h1>Fiesta.com</h1>
 
@@ -88,30 +90,41 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
+  <div class="numbertext">1 / 5</div>
   <img src="Pic 2.jpg" style="width:100%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="Pic 1.png" style="width:100%">
+  <div class="numbertext">2 / 5</div>
+  <img src="Pic 1.jpg" style="width:100%,height=200%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="Pic 3 (2).png" style="width:100%">
+  <div class="numbertext">3 / 5</div>
+  <img src="Pic 3.jpg" style="width:100%, height=200%">
   <div class="text">Caption Three</div>
 </div>
-
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="party.j.jpg"  style="width:100%, height:200%">
+   <div class="text">Caption four</div>
 </div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div> 
+  <img src="party.jpg" style="width:100%, height=200%">
+  <div class="text">Caption five</div>
 <br>
 
 <div style="text-align:center">
   <span class="dot"></span> 
   <span class="dot"></span> 
   <span class="dot"></span> 
+</div>
+<div class="w3-panel w3-orange"></div>
+  <h3>Info!</h3>
+  <p>Please sign up to be a memember for brand new designs for your party or function.</p>
 </div>
 
 <script>
@@ -133,6 +146,53 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+	<div class="w3-container">
+  <h2>Buttons (w3-btn)</h2>
+  <input type="button" class="w3-btn w3-red" value="enter">
+  <button class="w3-btn w3-red">enter </button>
+</div>
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 </script>
 
