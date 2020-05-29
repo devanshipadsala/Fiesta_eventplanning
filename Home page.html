@@ -1,33 +1,102 @@
 <!DOCTYPE html>
-<html  style="font-size: 20px;font-family: >
-  <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<html>
 <style>
-* {box-sizing: border-box;}
-body {font-family: Baloo 2, sans-serif,}
-.mySlides {display: none;}
+.pagination {
+  display: inline-block;
+}
 
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
 
-.slideshow-container {
-  max-width: 1000px;
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<h2>Rounded Active and Hover Buttons</h2>
+
+<div class="pagination">
+  <a href="#">sign up</a>
+  <a href="#">book consult</a>
+  <a href="">profile</a>
+  <a href="#">about</a>
+  <a href="#"></a>
+</div>
+
+</body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
   position: relative;
-  margin: auto;
-  
 }
 
-/* y is dis so complicated */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
   position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -36,163 +105,103 @@ body {font-family: Baloo 2, sans-serif,}
   top: 0;
 }
 
-
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;                                        
-  display: inline-block;
-  transition: background-color 0.6s ease;
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
 }
 
-.active {
-  background-color: #717171;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
 }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+.active,
+.demo:hover {
+  opacity: 1;
 }
 </style>
-<meta name="viewport" content="width=device-width, initial-scale=1">   
-</head>
-<body class="w3-container w3 auto">
+<body>
 
-<img src="logo.png" style="width:12%">  <h1 style="font-family:Lemonada; background-color:#900C3F;font-color:#FFC300">Fiesta</h1>
+<h2 style="text-align:center">Fiesta</h2>
 
-  <button><a href="home page.html">Home</a></button>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="Pic 4.png" style="width:80%;height:800px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="Pic 1.png" style="width:80%;height:800px">
+  </div>
 
-      
-  <button><a href="Sign up.html">sign up</a></button>
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="Pic 2.jpg" style="width:80%;height:800px">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="Pic 3 (2).png" style="width:80%;height:800px">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
 
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
 
-<div class="slideshow-container">
+  <div class="row">
 
-<div class="mySlides fade">
-  <div class="numbertext">1 / 5</div>
-  <img src="Pic 2.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 5</div>
-  <img src="Pic 1.jpg" style="width:100%,height=200%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 5</div>
-  <img src="Pic 3.jpg" style="width:100%, height=200%">
-  <div class="text">Caption Three</div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">4 / 5</div>
-  <img src="party.j.jpg"  style="width:100%, height:200%">
-   <div class="text">Caption four</div>
-</div>
-<div class="mySlides fade">
-  <div class="numbertext">5 / 5</div> 
-  <img src="party.jpg" style="width:100%, height=200%">
-  <div class="text">Caption five</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
-<div class="w3-panel w3-orange"></div>
-  <h3>Info!</h3>
-  <p>Please sign up to be a memember for brand new designs for your party or function.</p>
+    </div>
+    
 </div>
 
 <script>
-var slideIndex = 0;
-showSlides();
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
-  <div class="w3-container">
-  <h2>Buttons (w3-btn)</h2>
-  <input type="button" class="w3-btn w3-red" value="enter">
-  <button class="w3-btn w3-red">enter </button>
-</div>
-
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
+</script>    
 </body>
 </html>
